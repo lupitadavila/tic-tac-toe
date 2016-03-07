@@ -2,7 +2,13 @@ header{
 	text-align: center;
 	padding: 30px;
 }
+#tictactoe-holder{
+	text-align: center;
+}
 
+#reset{
+	margin: 50px 0;
+}
 #game-board{
 	width: auto;
 	max-width: 500px;
@@ -14,10 +20,11 @@ header{
     height: 150px;
 	text-align: center;
 	font-size: 50px;
-	line-height: 150px;
+	line-height: 140px;
 }
 #game-board td:hover {
-    background: blue;
+    background: lightblue;
+	color: #fff;
 }
 
 #game-board .x:before{
