@@ -24,10 +24,13 @@ $('.box').click(function(){
 
 // Reset the game
 $('#reset').click(function(){
-	$('td').removeClass('x circle');
+	resetGame();
 }
 );
 
+function resetGame(){
+	$('td').removeClass('x circle');
+}
 // Check if the box is marked
 function isMarked(box){
 	if( box.hasClass('x') || box.hasClass('circle') ){
@@ -49,7 +52,9 @@ function changeBox(box, player){
 	}
 	
 	if(isWinner(player)){
-			window.alert("You Win");
+			window.alert("Player " + (player+1)+ " wins!");
+			resetGame();
+			player = 0;
 	}
 	
 	return nextPlayer;
